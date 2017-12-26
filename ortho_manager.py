@@ -22,8 +22,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.tab_shortcut.activated.connect(self.on_tab)
         self.left_tree.setFocus()
 
+    @pyqtSlot()
     def on_tab(self):
-        print("Tab pressed")
+        if self.left_tree.hasFocus():
+            print("Tab pressed. Left tree in focus. Switching to right tree.")
+            self.right_tree.setFocus()
+        else:
+            print("Tab pressed. Right tree in focus. Switching to left tree.")
+            self.left_tree.setFocus()
 
 
 if __name__ == "__main__":
