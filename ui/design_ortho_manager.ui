@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Orthodox Manager</string>
   </property>
   <property name="styleSheet">
    <string notr="true">#QMainWindow {
@@ -101,47 +101,47 @@ background: black;
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="0" column="0">
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="view_button">
          <property name="styleSheet">
           <string notr="true"/>
          </property>
          <property name="text">
-          <string>PushButton</string>
+          <string>F3 View</string>
          </property>
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="edit_button">
          <property name="text">
-          <string>PushButton</string>
+          <string>F4 Edit</string>
          </property>
         </widget>
        </item>
        <item row="0" column="2">
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="copy_button">
          <property name="text">
-          <string>PushButton</string>
+          <string>F5 Copy</string>
          </property>
         </widget>
        </item>
        <item row="0" column="3">
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="move_button">
          <property name="text">
-          <string>PushButton</string>
+          <string>F6 Move</string>
          </property>
         </widget>
        </item>
        <item row="0" column="4">
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="mkdir_button">
          <property name="text">
-          <string>PushButton</string>
+          <string>F7 New Folder</string>
          </property>
         </widget>
        </item>
        <item row="0" column="5">
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QPushButton" name="exit_button">
          <property name="text">
-          <string>PushButton</string>
+          <string>Alt+F4 Exit</string>
          </property>
         </widget>
        </item>
@@ -159,6 +159,18 @@ background: black;
      <height>23</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuOptions"/>
   </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
@@ -178,22 +190,5 @@ background: black;
   </widget>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>left_tree</sender>
-   <signal>pressed(QModelIndex)</signal>
-   <receiver>right_tree</receiver>
-   <slot>setFocus()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>167</x>
-     <y>244</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>471</x>
-     <y>244</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

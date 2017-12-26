@@ -18,6 +18,24 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.setupUi(self)
 
+        self.left_model = QFileSystemModel()
+        self.left_model.setRootPath("/")
+
+        self.left_tree.setModel(self.left_model)
+        self.left_tree.setSortingEnabled(True)
+        self.left_tree.setAnimated(False)
+        self.left_tree.expandAll()
+        self.left_tree.sortByColumn(0, Qt.AscendingOrder)
+
+        self.right_model = QFileSystemModel()
+        self.right_model.setRootPath("/")
+
+        self.right_tree.setModel(self.right_model)
+        self.right_tree.setSortingEnabled(True)
+        self.right_tree.setAnimated(False)
+        self.right_tree.expandAll()
+        self.right_tree.sortByColumn(0, Qt.AscendingOrder)
+
         self.tab_shortcut = QShortcut(QKeySequence("Tab"), self)
         self.tab_shortcut.activated.connect(self.on_tab)
         self.left_tree.setFocus()
